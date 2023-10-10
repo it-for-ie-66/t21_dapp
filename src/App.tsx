@@ -3,6 +3,7 @@ import {
   MY_ACCOUNT_ADDRESS,
   SECRET_CONTRACT_ADDRESS,
   TOKEN_CONTRACT_ADDRESS,
+  TOKEN_SYMBOL,
   NFT_CONTRACT_ADDRESS,
 } from "./env";
 import { formatUnits } from "viem";
@@ -86,7 +87,7 @@ function App() {
             ? "...loading"
             : `${parseFloat(
                 formatUnits(useReadTokenBalance.data || 0n, 18)
-              ).toFixed(2)} POH`}
+              ).toFixed(2)} ${TOKEN_SYMBOL}`}
         </div>
         <a
           href={`https://sepolia.etherscan.io/address/${TOKEN_CONTRACT_ADDRESS}`}

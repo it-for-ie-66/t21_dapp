@@ -5,13 +5,15 @@ export const SECRET_CONTRACT_ADDRESS = import.meta.env
 export const TOKEN_CONTRACT_ADDRESS = import.meta.env
   .VITE_TOKEN_CONTRACT_ADDRESS;
 export const NFT_CONTRACT_ADDRESS = import.meta.env.VITE_NFT_CONTRACT_ADDRESS;
+export const TOKEN_SYMBOL = import.meta.env.VITE_TOKEN_SYMBOL;
 
 if (
   !ALCHEMY_KEY ||
   !MY_ACCOUNT_ADDRESS ||
   !SECRET_CONTRACT_ADDRESS ||
   !TOKEN_CONTRACT_ADDRESS ||
-  !NFT_CONTRACT_ADDRESS
+  !NFT_CONTRACT_ADDRESS ||
+  !TOKEN_SYMBOL
 ) {
   throw new Error("Please set env variables correctly.");
 }
